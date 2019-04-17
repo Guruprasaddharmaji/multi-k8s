@@ -17,7 +17,7 @@ after_success:
   # Docker login
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Push the images to Dockerhub
-  - docker push guruprasaddharmaji/multi-client
-  - docker push guruprasaddharmaji/multi-nginx
-  - docker push guruprasaddharmaji/multi-server
-  - docker push guruprasaddharmaji/multi-worker
+  - docker push dgp6182/multi-client
+  - docker push dgp6182/multi-nginx
+  - docker push dgp6182/multi-server
+  - docker push dgp6182/multi-worker
