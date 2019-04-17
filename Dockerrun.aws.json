@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion": "2",
+    "ContainerDefinitions": [{
+            "name": "client",
+            "image": "dgp6182/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "dgp6182/multi-server",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "dgp6182/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "dgp6182/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "PortMappings": [{
+                "hostPort": 80,
+                "containerPort": 80
+            }],
+            "links": ["client", "server"]
+        }
+    ]
+}
