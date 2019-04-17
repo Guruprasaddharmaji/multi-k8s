@@ -4,16 +4,16 @@ services:
   - docker
 
 before_install:
-  - docker build -t guruprasaddharmaji/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t dgp6182/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run guruprasaddharmaji/react-test npm test -- --coverage
+  - docker run dgp6182/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t guruprasaddharmaji/multi-client ./client
-  - docker build -t guruprasaddharmaji/multi-server ./server
-  - docker build -t guruprasaddharmaji/multi-nginx  ./nginx
-  - docker build -t guruprasaddharmaji/multi-worker ./worker
+  - docker build -t dgp6182/multi-client ./client
+  - docker build -t dgp6182/multi-server ./server
+  - docker build -t dgp6182/multi-nginx  ./nginx
+  - docker build -t dgp6182/multi-worker ./worker
   # Docker login
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Push the images to Dockerhub
