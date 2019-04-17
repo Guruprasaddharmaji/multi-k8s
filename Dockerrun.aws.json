@@ -1,5 +1,5 @@
 {
-    "AWSEBDockerrunVersion": "2",
+    "AWSEBDockerrunVersion": 2,
     "ContainerDefinitions": [{
             "name": "client",
             "image": "dgp6182/multi-client",
