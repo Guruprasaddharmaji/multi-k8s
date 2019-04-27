@@ -7,7 +7,7 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: kbankzy.io
+  commonName: bankzy.io
   dnsNames:
     - bankzy.io
     - www.bankzy.io
