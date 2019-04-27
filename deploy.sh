@@ -12,6 +12,6 @@ docker push dgp6182/multi-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployments/server-deployment server=dgp6182/multi-server:$SHA
-kubectl set image deployments/client-deployment client=dgp6182/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker=dgp6182/multi-client:$SHA
+#kubectl set image deployments/server-deployment server=dgp6182/multi-server:$SHA
+#kubectl set image deployments/client-deployment client=dgp6182/multi-client:$SHA
+#kubectl set image deployments/worker-deployment worker=dgp6182/multi-client:$SHA
