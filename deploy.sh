@@ -1,6 +1,7 @@
-docker build -t dgp6182/multi-client:latest -t dgp6182/multi-client:$SHA -f ./client/Dcokerfile ./client
+docker build -t dgp6182/multi-client:latest -t dgp6182/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t dgp6182/multi-server:latest -t dgp6182/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t dgp6182/multi-worker:latest -t dgp6182/multi-worker:$SHA -f ./worker/Dcokerfile ./worker
+docker build -t dgp6182/multi-worker:latest -t dgp6182/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+
 docker push dgp6182/multi-client:latest
 docker push dgp6182/multi-server:latest
 docker push dgp6182/multi-worker:latest
