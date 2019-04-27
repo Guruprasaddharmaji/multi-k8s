@@ -12,20 +12,20 @@ spec:
       labels:
         component: server
     spec:
-      containers:
+      containers: 
         - name: server
-          image: stephengrider/multi-server
+          image: dgp6182/multi-server
           ports:
             - containerPort: 5000
           env:
             - name: REDIS_HOST
-              value: redis-cluster-ip-service
+              value: redis-clusterip-service
             - name: REDIS_PORT
               value: '6379'
             - name: PGUSER
               value: postgres
             - name: PGHOST
-              value: postgres-cluster-ip-service
+              value: postgres-clusterip-service
             - name: PGPORT
               value: '5432'
             - name: PGDATABASE
@@ -35,3 +35,4 @@ spec:
                 secretKeyRef:
                   name: pgpassword
                   key: PGPASSWORD
+    
